@@ -36,6 +36,9 @@ device.power_off(delay: 10) # waits 10 seconds before powering the device off
 
 # or chain methods together
 device.power_off.power_on(delay: 15) # turn off device, wait 15 seconds, then turn device back on
+
+# reboot
+device.reboot
 ```
 
 
