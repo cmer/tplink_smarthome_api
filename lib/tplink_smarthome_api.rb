@@ -31,7 +31,9 @@ class TplinkSmarthomeApi
   end
 
   def reboot(delay: 1)
-    send_command {system: { reboot: { delay: delay } } }.to_json
+    payload = { system: {
+                reboot: { delay: delay } } }.to_json
+    send_command payload
   end
 
   private

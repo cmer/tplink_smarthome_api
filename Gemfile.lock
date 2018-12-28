@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tplink_smarthome_api (0.2.0)
+    tplink_smarthome_api (0.2.1)
 
 GEM
   remote: https://rubygems.org/
