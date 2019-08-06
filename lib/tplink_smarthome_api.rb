@@ -5,7 +5,7 @@ class TplinkSmarthomeApi
   attr_accessor :ip_address, :verbose
 
   def initialize(ip_address, verbose: false)
-    raise RuntimeError unless self.dependendies_met?
+    raise RuntimeError unless self.class.dependencies_met?
     @ip_address = ip_address
     @verbose = verbose
   end

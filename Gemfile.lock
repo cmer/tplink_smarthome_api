@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tplink_smarthome_api (0.3.0)
+    tplink_smarthome_api (0.3.1)
       json
 
 GEM
