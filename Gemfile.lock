@@ -1,12 +1,15 @@
 PATH
   remote: .
   specs:
-    tplink_smarthome_api (0.2.1)
+    tplink_smarthome_api (0.3.0)
+      json
 
 GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.3)
+    irb (1.0.0)
+    json (2.2.0)
     rake (10.5.0)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
@@ -21,15 +24,18 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
+    shell_mock (0.7.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bundler (~> 1.16)
+  irb
   rake (~> 10.0)
   rspec (~> 3.0)
+  shell_mock (~> 0.7)
   tplink_smarthome_api!
 
 BUNDLED WITH
-   1.16.4
+   1.17.2

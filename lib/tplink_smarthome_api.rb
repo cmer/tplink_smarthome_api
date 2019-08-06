@@ -5,7 +5,7 @@ class TplinkSmarthomeApi
   attr_accessor :ip_address, :verbose
 
   def initialize(ip_address, verbose: false)
-    raise RuntimeError unless smarthome_cli_available?
+    raise RuntimeError unless self.dependendies_met?
     @ip_address = ip_address
     @verbose = verbose
   end
@@ -36,6 +36,10 @@ class TplinkSmarthomeApi
     send_command payload
   end
 
+  def self.dependencies_met?
+    self.smarthome_cli_available?
+  end
+
   private
 
   def send_command(payload)
@@ -43,9 +47,9 @@ class TplinkSmarthomeApi
     self
   end
 
-  def smarthome_cli_available?
+  def self.smarthome_cli_available?
     `which tplink-smarthome-api`
-    return true if $? == 0
+    return true if $?.exitstatus == 0
 
     puts "[#{Time.now}] tplink-smarthome-api could not be found."
     puts "[#{Time.now}] To install it, run: `npm install -g tplink-smarthome-api`"
